@@ -1,0 +1,33 @@
+﻿\\Поиск пути
+Число поле(X, Y)
+Число minfirst
+Вектор minlast
+Вектор MinПуть()
+minlast = (Xф, Yф)
+minfirst = поле(Xminlast, Yminlast)
+MinПуть(0) = (minlast)
+шаг = 0
+Пока min != 0	
+	minfirst = поле(Xminlast + 1, Yminlast)
+	rem = (Xminlast + 1, Yminlast)
+	Конец если
+	Если minfirst > поле(Xminlast - 1, Yminlast)
+		minfirst = поле(Xminlast - 1, Yminlast)
+		rem = (Xminlast - 1, Yminlast)
+	Конец если
+	Если minfirst > поле(Xminlast, Yminlast + 1)
+		minfirst = поле(Xminlast, Yminlast + 1)
+		rem = (Xminlast, Yminlast + 1)
+	Конец если
+	Если minfirst > поле(Xminlast, Yminlast - 1)
+		minfirst = поле(Xminlast, Yminlast - 1)
+		rem = (Xminlast, Yminlast - 1)
+	Конец если
+	minlast = rem
+	MinПуть(шаг) = (minlast)
+	шаг = шаг + 1
+Конец цикла
+
+	
+	
+	
